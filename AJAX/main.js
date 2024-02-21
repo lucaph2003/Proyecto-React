@@ -2,14 +2,14 @@ window.addEventListener("load",setup);
 const api = "https://calcount.develotion.com";
 
 function setup(){
-    registrarPersona();
-    iniciarSesion();
+    //registrarPersona();
+    //iniciarSesion();
     obtenerPaises();
-    obtenerUsuariosPorPais();
-    obtenerRegistros();
-    agregarRegistro();
-    eliminarRegistro();
-    obtenerAlimentos();
+    // obtenerUsuariosPorPais();
+    // obtenerRegistros();
+    // agregarRegistro();
+    // eliminarRegistro();
+    // obtenerAlimentos();
 }
 
 //////REGISTRO
@@ -81,6 +81,7 @@ const obtenerPaises = () => {
     fetch(api + "/paises.php")
     .then(r => r.json())
     .then(datos => {
+        console.log(datos);
         datos.paises.forEach(pais => {
             console.log(pais.name);
         });
